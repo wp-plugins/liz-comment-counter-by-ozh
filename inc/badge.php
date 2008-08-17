@@ -8,7 +8,8 @@ http://planetozh.com/blog/my-projects/liz-strauss-comment-count-badge-widget-wor
 
 global $wp_ozh_lcc_badge, $wp_ozh_lcc;
 
-include_once(dirname(__FILE__).'/csscolor.php');
+if (!class_exists('CSS_Color'))
+	include_once(dirname(__FILE__).'/csscolor.php');
 
 if(!function_exists('attribute_escape')) {
 function attribute_escape( $text, $quotes = 0 ) {
