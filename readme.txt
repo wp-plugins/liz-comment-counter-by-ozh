@@ -16,7 +16,13 @@ For a more detailed documentation and screenshots of the interface, please visit
 
 **Tip:** To keep track of this plugin's evolution and features, you are advised to subscribe to the [author's feed](http://planetozh.com/exit/feed)
 
-Ho, and if you like this plugin, please rate it 5 stars! :) ------------------------------------------------>
+Ho, and if you like this plugin, please rate it 5 stars! :) -------------------->
+
+== Screenshots ==
+
+1. The admin interface is very flexible
+2. The color picker is totally neat
+3. Featuring a variety of color presets if you're lacking color ideas
 
 == Installation ==
 
