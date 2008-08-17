@@ -14,7 +14,9 @@ For a more detailed documentation and screenshots of the interface, please visit
 
 **Tip:** To keep track of this plugin's evolution and features, you are advised to subscribe to the [author's feed](http://planetozh.com/exit/feed)
 
-Ho, and if you like this plugin, please rate it 5 stars! :)
+Ho, and if you like this plugin...
+...
+please rate it 5 stars! :) --------------------------------------------------->
 
 == Installation ==
 
