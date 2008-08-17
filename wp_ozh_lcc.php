@@ -10,7 +10,7 @@ Author URI: http://planetOzh.com
 
 global $wp_ozh_lcc;
 
-define('LCC_AS_PLUGIN_ONLY', true);
+define('LCC_AS_PLUGIN_ONLY', false);
 	// Pure plugin, no widget: will create an extra "Settings" page
 	// Set to true if your theme is not widget aware (or if you don't like widgets)
 	// Leave to false to run as a widget (no extra Settings page)
