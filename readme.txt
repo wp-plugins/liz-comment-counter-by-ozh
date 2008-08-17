@@ -8,7 +8,9 @@ A highly configurable badge to show off the number of comments your blog has.
 
 == Description ==
 
-**Liz Comment Counter** is a highly configurable badge (very similar to the Feedburner one, except it's more configurable) to show off the number of comments your blog has.
+**Liz Strauss Comment Counter** is a highly configurable badge (very similar to the Feedburner one, except it's more configurable) to show off the number of comments your blog has.
+
+This plugin was made in celebration of [Liz Strauss](http://www.successful-blog.com/) dedication to blog community building so you, too, can show the world how social your blog is.
 
 For a more detailed documentation and screenshots of the interface, please visit its official page: [Liz Comment Counter](http://planetozh.com/blog/my-projects/liz-strauss-comment-count-badge-widget-wordpress/ "Liz Comment Counter by Ozh")
 
