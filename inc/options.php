@@ -82,7 +82,7 @@ function wp_ozh_lcc_option_table() {
 	$ratio = number_format($totalcomments / $totalposts, 2, '.', '');
 	
 	$checked_linkback = ($linkback == 1) ? 'checked="checked"' : '' ;
-	$checked_fontspacing = ($checked_fontspacing == 1) ? 'checked="checked"' : '' ;
+	$checked_fontspacing = ($fontspacing == 1) ? 'checked="checked"' : '' ;
 	$fontlist = wp_ozh_lcc_get_fonts($fontname);
 	
 	$plugin_url = wp_ozh_lcc_pluginurl().'/inc';
