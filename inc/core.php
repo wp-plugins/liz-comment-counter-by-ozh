@@ -19,12 +19,15 @@ function wp_ozh_lcc_badge() {
 	if (file_exists($src)) {
 		$url = $url . "/cmt_badge.png?c=$count";
 	} else {
-		$url = wp_ozh_lcc_pluginurl() . "/inc/badge.php?fg=$fg&bg=$bg&label=$label&count=$count&font=$fontname&spacing=$fontspacing";
+		$url = wp_ozh_lcc_pluginurl() . "/inc/badge.php?fg=$fg&amp;bg=$bg&amp;label=$label&amp;count=$count&amp;font=$fontname&amp;spacing=$fontspacing";
 	}
 
-	echo "<img id=\"comment_count_badge\" border=\"0\" width=\"88\" height=\"19\" src=\"$url\" alt=\"Comment Count Badge\" />";
+	$badge = "<img id=\"comment_count_badge\" border=\"0\" width=\"88\" height=\"19\" src=\"$url\" alt=\"Comment Count Badge\" />";
 	if ($linkback) {
+		printf ("<a href=\"http://planetozh.com/blog/my-projects/liz-strauss-comment-count-badge-widget-wordpress/\">%s</a>", $badge);
 		echo "<span style='display:block;font-family:sans-serif;font-size:9px'>Get your <a title='Liz&rsquo;s Comment Count Badge By Ozh' href='http://planetozh.com/blog/my-projects/liz-strauss-comment-count-badge-widget-wordpress/'>Badge</a>!</span>";
+	} else {
+		echo $badge;
 	}
 }
 
@@ -48,7 +51,7 @@ function wp_ozh_lcc_defaults() {
 	unset($wp_ozh_lcc[0]); // produced by the (array) casting
 	
 	foreach ($defaults as $k=>$v) {
-		if (!isset($wp_ozh_lcc[$k]) or empty($wp_ozh_lcc[$k]))
+		if (!isset($wp_ozh_lcc[$k]))
 			$wp_ozh_lcc[$k] = $v;
 	}
 	
@@ -118,6 +121,10 @@ function wp_ozh_lcc_get_post_count() {
 	$num_pages = wp_count_posts( 'page' ); // $num_pages->publish
 
 	return intval($num_posts->publish) + intval($num_pages->publish);
+}
+
+function wp_ozh_lcc_customicon($hook) {
+	return ($hook == 'ozh_lcc') ? wp_ozh_lcc_pluginurl().'/inc/icon.png' : $hook;
 }
 
 ?>

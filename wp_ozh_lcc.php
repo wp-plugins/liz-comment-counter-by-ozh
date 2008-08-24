@@ -3,9 +3,15 @@
 Plugin Name: Liz Comment Counter by Ozh
 Plugin URI: http://planetozh.com/blog/my-projects/liz-strauss-comment-count-badge-widget-wordpress/
 Description: Liz Strauss' Comment Count Badge. Got a vibrant community of commenters? Show it off!
-Version: 1.0
+Version: 1.0.1
 Author: Ozh
 Author URI: http://planetOzh.com
+*/
+
+/* Release History :
+ * 1.0       Initial release
+ * 1.0.1     Fixed: options with checkbox would not be stored
+             Changed: URL to plugin page also link by badge itself
 */
 
 global $wp_ozh_lcc;
@@ -38,6 +44,10 @@ function wp_ozh_lcc_init() {
 	} else {
 		add_action('admin_menu', 'wp_ozh_lcc_add_page', -10);
 	}
+	
+	// Custom icon in Ozh' Admin Drop Down Menu
+	add_filter( 'ozh_adminmenu_icon', 'wp_ozh_lcc_customicon');
+
 }
 
 function wp_ozh_lcc_add_page() {

@@ -15,8 +15,9 @@ function wp_ozh_lcc_processform() {
 	if (!wp_ozh_lcc_is_widget())
 		check_admin_referer('ozh-lcc');
 	
-	// Debug:
-	// echo "<pre>POST: ";echo htmlentities(print_r($_POST,true));echo "</pre>";	
+	/* Debug: *
+	echo "<pre>POST: ";echo htmlentities(print_r($_POST,true));echo "</pre>";	
+	/**/
 	
 	switch ($_POST['lcc_action']) {
 	case 'update_options':
