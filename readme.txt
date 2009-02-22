@@ -2,6 +2,7 @@
 Tags: comment, comments, badge, ozh, widget, liz, liz strauss, lorelle, social
 Donate link: http://planetozh.com/exit/donate
 Requires at least: 2.5
+Tested up to: 9.9
 Stable tag: trunk
 
 A highly configurable badge to show off the number of comments your blog has.
