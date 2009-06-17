@@ -1,0 +1,11 @@
+Fonts shipped with plugin Liz Comment Counter By Ozh :
+
+* Andale, Arial, Trebuchet, Verdana
+	These fonts are (c) The Monotype Corporation.
+	Part of the redistributable pack "Core Font For the Web", a Microsoft Initiative
+	http://en.wikipedia.org/wiki/Core_fonts_for_the_Web
+
+* Silkscreen
+	This font is (c) Jason Kotkke, free for personal and corporate use
+	http://www.kottke.org/plus/type/silkscreen/
+

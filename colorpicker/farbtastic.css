@@ -1,0 +1,53 @@
+.farbtastic {
+  position: relative;
+}
+.farbtastic * {
+  position: absolute;
+  cursor: crosshair;
+}
+.farbtastic, .farbtastic .wheel {
+  width: 195px;
+  height: 195px;
+}
+.farbtastic .color, .farbtastic .overlay {
+  top: 47px;
+  left: 47px;
+  width: 101px;
+  height: 101px;
+}
+.farbtastic .wheel {
+  background: url(wheel.png) no-repeat;
+  width: 195px;
+  height: 195px;
+}
+.farbtastic .overlay {
+  background: url(mask.png) no-repeat;
+}
+.farbtastic .marker {
+  width: 17px;
+  height: 17px;
+  margin: -8px 0 0 -8px;
+  overflow: hidden; 
+  background: url(marker.png) no-repeat;
+}
+
+.lcc_picker_wrap {
+	position:absolute;
+	display:none;
+	background:#fff;
+	border:3px solid #ccc;
+	padding:3px;
+}
+
+.lcc_swatch {
+	padding:1px 10px;
+	cursor:pointer;
+	background:transparent url(color_wheel.png) top left no-repeat;
+}
+
+#lcc_update_badge {
+	padding:5px 10px;
+	cursor:pointer;
+	background:transparent url(reload.png) top left no-repeat;
+}
+
