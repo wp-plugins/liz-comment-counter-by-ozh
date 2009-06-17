@@ -2,8 +2,8 @@
 /*
 Plugin Name: Liz Comment Counter by Ozh
 Plugin URI: http://planetozh.com/blog/my-projects/liz-strauss-comment-count-badge-widget-wordpress/
-Description: Liz Strauss' Comment Count Badge. Got a vibrant community of commenters? Show it off!
-Version: 1.0.2
+Description: Liz Strauss' Comment Count Badge. Got a vibrant community of commenters? Show it off! <strong>for WordPress 2.8+ only</strong>
+Version: 1.1
 Author: Ozh
 Author URI: http://planetOzh.com
 */
@@ -13,15 +13,13 @@ Author URI: http://planetOzh.com
  * 1.0.1     Fixed: options with checkbox would not be stored
              Changed: URL to plugin page also link by badge itself
  * 1.0.2     Added: ru_RU by fatcow.com
+ * 1.1       Updated: fixing the fucking widget for WP 2.8. I hate those fucking widgets.
+			 Removed: split logic between widget & option page
+             Updated: filters for custom icon & plugin action links
 */
 
 global $wp_ozh_lcc;
 
-define('LCC_AS_PLUGIN_ONLY', false);
-	// Pure plugin, no widget: will create an extra "Settings" page
-	// Set to true if your theme is not widget aware (or if you don't like widgets)
-	// Leave to false to run as a widget (no extra Settings page)
-	
 function wp_ozh_lcc_init() {
 	global $wp_ozh_lcc;
 	if ( !defined('WP_CONTENT_URL') )
@@ -37,17 +35,13 @@ function wp_ozh_lcc_init() {
 	$mofile = wp_ozh_lcc_plugindir().'/translations/commentbadge' . '-' . $locale . '.mo';
 	load_textdomain('commentbadge', $mofile);
 
-	// Widget or traditional option page ?
-	if ( wp_ozh_lcc_is_widget() ) {
-		wp_ozh_lcc_require('widget.php');
-		register_sidebar_widget('Liz Comment Counter', 'widget_ozh_lcc');
-		register_widget_control('Liz Comment Counter', 'widget_ozh_lcc_control', 750, 900);
-	} else {
-		add_action('admin_menu', 'wp_ozh_lcc_add_page', -10);
-	}
+	// Widget & option page
+	wp_ozh_lcc_require('widget.php');
+	add_action('widgets_init', 'wp_ozh_lcc_widget_init');
+	add_action('admin_menu', 'wp_ozh_lcc_add_page', -10);
 	
 	// Custom icon in Ozh' Admin Drop Down Menu
-	add_filter( 'ozh_adminmenu_icon', 'wp_ozh_lcc_customicon');
+	add_filter( 'ozh_adminmenu_icon_ozh_lcc', 'wp_ozh_lcc_customicon');
 
 }
 
@@ -60,10 +54,8 @@ function wp_ozh_lcc_options_page_includes() {
 	wp_ozh_lcc_options_page();
 }
 
-function wp_ozh_lcc_plugin_actions($links, $file) {
-	$target = ( wp_ozh_lcc_is_widget() ) ? 'widgets.php' : 'options-general.php?page=ozh_lcc';
-	if ($file == plugin_basename(__FILE__))
-		$links[] = "<a href='$target'><b>".wp_ozh_lcc__('Settings').'</b></a>';
+function wp_ozh_lcc_plugin_actions($links) {
+	$links[] = "<a href='options-general.php?page=ozh_lcc'><b>".wp_ozh_lcc__('Settings').'</b></a>';
 	return $links;
 }
 
@@ -108,7 +100,7 @@ function wp_ozh_lcc_activate() {
 add_action('plugins_loaded', 'wp_ozh_lcc_init');
 add_action('comment_post', 'wp_ozh_lcc_newcomment_public', 9999, 2); // someone posts a comment
 add_action('wp_set_comment_status', 'wp_ozh_lcc_newcomment_admin', 9999, 2); // admin manages comments
-add_filter('plugin_action_links', 'wp_ozh_lcc_plugin_actions', 10, 2);
+add_filter('plugin_action_links_'.plugin_basename(__FILE__), 'wp_ozh_lcc_plugin_actions', 10, 2);
 add_action('activate_' . plugin_basename( __FILE__), 'wp_ozh_lcc_activate' );
 
 ?>

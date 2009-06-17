@@ -12,8 +12,7 @@ function wp_ozh_lcc_processform() {
 
 	global $wp_ozh_lcc;
 	
-	if (!wp_ozh_lcc_is_widget())
-		check_admin_referer('ozh-lcc');
+	check_admin_referer('ozh-lcc');
 	
 	/* Debug: *
 	echo "<pre>POST: ";echo htmlentities(print_r($_POST,true));echo "</pre>";	
@@ -47,11 +46,10 @@ function wp_ozh_lcc_processform() {
 		break;
 	}
 
-	if (!wp_ozh_lcc_is_widget()) {
-		echo '<div id="message" class="updated fade">';
-		echo '<p>'.sprintf(wp_ozh_lcc__('Settings <strong>%s</strong>'),$msg).'</p>';
-		echo "</div>\n";
-	}
+	echo '<div id="message" class="updated fade">';
+	echo '<p>'.sprintf(wp_ozh_lcc__('Settings <strong>%s</strong>'),$msg).'</p>';
+	echo "</div>\n";
+
 }
 
 // Return a dropdown list of fonts from subdir, with $selected highlighted
@@ -90,20 +88,14 @@ function wp_ozh_lcc_option_table() {
 	
 	$lcc_howto = $lcc_widget_title = '';
 	
-	if (wp_ozh_lcc_is_widget()) {
-		$lcc_widget_title = '
-	<tr><th scope="row"><label for="lcc-input-title">'.wp_ozh_lcc__('Title').'</label></th>
-	<td colspan="3"><input type="text" value="'.$title.'" id="lcc-input-title" name="lcc_input_title"/>
-	</td></tr>
-';	} else {
 		$lcc_howto = '
 	<tr><th scope="row"><label for="lcc-input-title">'.wp_ozh_lcc__('Usage').'</label></th>
 	<td colspan="3">'.wp_ozh_lcc__('Place the following template tag in your template file, for instance sidebar.php').':<br/>
-	<code>&lt;?php if (function_exists(\'wp_ozh_lcc_badge\')) wp_ozh_lcc_badge(); ?></code>
+	<code>&lt;?php if (function_exists(\'wp_ozh_lcc_badge\')) wp_ozh_lcc_badge(); ?></code><br/>'.
+	wp_ozh_lcc__('If your theme is widget enabled, simply go the Widgets management page').'
 	</td></tr>
 ';
 
-	}
 
 
 	?>
@@ -111,7 +103,6 @@ function wp_ozh_lcc_option_table() {
 	<table class="form-table" border="0"><tbody>
     <input type="hidden" name="lcc_action" value="update_options">
 	
-	<?php echo $lcc_widget_title; ?>
 	<?php echo $lcc_howto; ?>
 		
     <tr><th scope="row"><label for="lcc-input-fg"><?php echo wp_ozh_lcc__('Text Color');?></label></th>
@@ -138,7 +129,7 @@ function wp_ozh_lcc_option_table() {
 	</td></tr>
 
     <tr><th scope="row"><label for="lcc-input-label"><?php echo wp_ozh_lcc__('Label');?></label></th>
-	<td colspan="2"><input type="text" value="<?php echo $label ?>" id="lcc-input-label" size="8" name="lcc_input_label"/>
+	<td colspan="2"><input type="text" value="<?php echo $label ?>" id="lcc-input-label" size="10" name="lcc_input_label"/>
 	<label for="lcc-input-fontname"><?php echo wp_ozh_lcc__('Font');?> :</label><select name="lcc_fontname" id="lcc-input-fontname"><?php echo $fontlist; ?></select>
 	<span id="lcc-groupspacing"><input type="checkbox" name="lcc_fontspacing" id="lcc-input-fontspacing" <?php echo $checked_fontspacing; ?> /><label for="lcc-input-fontspacing"><?php echo wp_ozh_lcc__('Extra&nbsp;spacing');?></label></span>
 	</td></tr>
@@ -147,11 +138,7 @@ function wp_ozh_lcc_option_table() {
 	<td colspan="3"><label><input type="checkbox" <?php echo $checked_linkback; ?> id="lcc-input-linkback" name="lcc_linkback"/> <?php echo wp_ozh_lcc__('Add a link back to the plugin page');?></label><br/>
 	<?php echo wp_ozh_lcc__('If you think this is a cool plugin, please leave this option enabled so your loyal readers &amp; commenters can find about this plugin too!');?>
 	</td></tr>
-	
-	<tr><th scope="row"><?php echo wp_ozh_lcc__('Reset');?></th>
-	<td colspan="3"><span id="lcc-reset" class="widget-action widget-control-save edit alignleft"><?php echo wp_ozh_lcc__('Reset to default values');?></span> (<?php echo wp_ozh_lcc__('do not forget to save');?>)
-	</td></tr>
-	
+
     <tr><th scope="row"><?php echo wp_ozh_lcc__('Conversations');?></th>
 	<td colspan="3"><?php echo sprintf(wp_ozh_lcc__('As of today, there have been here on this blog <b>%s</b>. Given that you currently have <b>%s</b> posts (including pages), this makes a conversation ratio of <b>%s</b> comments per post.'), $comment_details, $totalposts, $ratio); ?>
 	</td></tr>
@@ -240,7 +227,7 @@ jQuery(document).ready(function(){
 		(display == 'block') ? jQuery('#'+target).fadeOut(100) : jQuery('#'+target).fadeIn(100);
 		var bg = (display == 'block') ? '0px 0px' : '0px -24px';
 		jQuery(this).css('background-position', bg);
-	}).tTips(); // tooltipize
+	});
 	
 	// Close color pickers when click on the document. This function is hijacked by farbtastic's event when a color picker is open
 	jQuery(document).mousedown(function(){
@@ -270,7 +257,7 @@ jQuery(document).ready(function(){
 	lcc_make_presets();
 	jQuery('.lcc_preset').click(function(){
 		lcc_update_badge(ozh_cl_RGBtoHex(jQuery(this).css('color')), ozh_cl_RGBtoHex(jQuery(this).css('backgroundColor')));
-	}).tTips();
+	});
 	
 	jQuery('#lcc-input-fontname').change(function(){
 	lcc_hide_spacingtoggle();}).change();
@@ -280,7 +267,7 @@ jQuery(document).ready(function(){
 	jQuery('#lcc_update_badge').click(function(){
 		lcc_update_badge();
 	})
-	jQuery('#lcc_update_badge').tTips();
+	jQuery('#lcc_update_badge');
 	jQuery('#lcc_badge').click(function(){
 		lcc_update_badge();
 	});

@@ -57,11 +57,6 @@ function wp_ozh_lcc_defaults() {
 	
 }
 
-// Can we run as a widget, or will it be only a traditional plugin?
-function wp_ozh_lcc_is_widget() {
-	return (!defined('LCC_AS_PLUGIN_ONLY') or !LCC_AS_PLUGIN_ONLY);
-}
-
 // Translation wrapper: alias for __($string, 'commentbadge')
 function wp_ozh_lcc__($string) {
 	return __($string, 'commentbadge');
@@ -123,8 +118,8 @@ function wp_ozh_lcc_get_post_count() {
 	return intval($num_posts->publish) + intval($num_pages->publish);
 }
 
-function wp_ozh_lcc_customicon($hook) {
-	return ($hook == 'ozh_lcc') ? wp_ozh_lcc_pluginurl().'/inc/icon.png' : $hook;
+function wp_ozh_lcc_customicon() {
+	return wp_ozh_lcc_pluginurl().'/inc/icon.png';
 }
 
 ?>

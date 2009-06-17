@@ -40,7 +40,7 @@
 }
 
 .lcc_swatch {
-	padding:1px 10px;
+	padding:3px 10px;
 	cursor:pointer;
 	background:transparent url(color_wheel.png) top left no-repeat;
 }
