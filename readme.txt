@@ -1,7 +1,7 @@
 === Liz Comment Counter by Ozh ===
 Tags: comment, comments, badge, ozh, widget, liz, liz strauss, lorelle, social
 Donate link: http://planetozh.com/exit/donate
-Requires at least: 2.5
+Requires at least: 2.8
 Tested up to: 9.9
 Stable tag: trunk
 
