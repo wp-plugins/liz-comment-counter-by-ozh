@@ -1,0 +1,165 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Liz Comment Counter by Ozh\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-08-05 18:10+0100\n"
+"PO-Revision-Date: 2009-11-28 16:23-0000\n"
+"Last-Translator: vera <verasoul@hotmail.com>\n"
+"Language-Team: Ozh <ozh[at]planetozh[dot]com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-KeywordsList: wp_ozh_lcc__\n"
+"Plural-Forms: Tranlated by http://www.verasoul.com\n"
+"X-Poedit-SearchPath-0: E:\\home\\ozh\\planetozh.com\\blog\\wp-content\\plugins\\liz-comment-counter-by-ozh\n"
+
+#: E:\home\ozh\planetozh.com\blog\wp-content\plugins\liz-comment-counter-by-ozh/wp_ozh_lcc.php:55
+msgid "Settings"
+msgstr "Configuraciones"
+
+#: E:\home\ozh\planetozh.com\blog\wp-content\plugins\liz-comment-counter-by-ozh/inc/optionpage.php:32
+msgid "Save Changes"
+msgstr "Guardar Cambios"
+
+#: E:\home\ozh\planetozh.com\blog\wp-content\plugins\liz-comment-counter-by-ozh/inc/optionpage.php:38
+#: E:\home\ozh\planetozh.com\blog\wp-content\plugins\liz-comment-counter-by-ozh/inc/optionpage.php:50
+msgid "Reset Settings"
+msgstr "Resetear Configuraciones"
+
+#: E:\home\ozh\planetozh.com\blog\wp-content\plugins\liz-comment-counter-by-ozh/inc/optionpage.php:45
+msgid "Clicking the following button will remove all the plugin settings from your database. You might want to do so in the following cases:"
+msgstr "Haciendo clic en el siguiente botón se eliminarán las configuraciones del plugin de la base de datos. Podría no desear hacerlo en los siguientes casos:"
+
+#: E:\home\ozh\planetozh.com\blog\wp-content\plugins\liz-comment-counter-by-ozh/inc/optionpage.php:47
+msgid "you want to uninstall the plugin and leave no unnecessary entries in your database"
+msgstr "desea desinstalar el plugin y no dejan entradas innecesarias en la base de datos"
+
+#: E:\home\ozh\planetozh.com\blog\wp-content\plugins\liz-comment-counter-by-ozh/inc/optionpage.php:48
+msgid "you want all settings to be reverted to their default values"
+msgstr "desea que todos los ajustes que se establezcan a sus valores por defecto"
+
+#: E:\home\ozh\planetozh.com\blog\wp-content\plugins\liz-comment-counter-by-ozh/inc/optionpage.php:50
+msgid "Really do?"
+msgstr "¿De veras quieres hacerlo?"
+
+#: E:\home\ozh\planetozh.com\blog\wp-content\plugins\liz-comment-counter-by-ozh/inc/optionpage.php:51
+msgid "There is no undo, so be very sure you want to click the button!"
+msgstr "No se puede deshacer, así que, ¡asegúrese de que quiere hacer clic en el botón!"
+
+#: E:\home\ozh\planetozh.com\blog\wp-content\plugins\liz-comment-counter-by-ozh/inc/options.php:39
+msgid "updated"
+msgstr "Actualizado"
+
+#: E:\home\ozh\planetozh.com\blog\wp-content\plugins\liz-comment-counter-by-ozh/inc/options.php:45
+msgid "deleted"
+msgstr "Borrado"
+
+#: E:\home\ozh\planetozh.com\blog\wp-content\plugins\liz-comment-counter-by-ozh/inc/options.php:51
+#, php-format
+msgid "Settings <strong>%s</strong>"
+msgstr "Configuraciones <strong>%s</strong>"
+
+#: E:\home\ozh\planetozh.com\blog\wp-content\plugins\liz-comment-counter-by-ozh/inc/options.php:59
+msgid "Built in"
+msgstr "Realizado en"
+
+#: E:\home\ozh\planetozh.com\blog\wp-content\plugins\liz-comment-counter-by-ozh/inc/options.php:94
+msgid "Title"
+msgstr "Título"
+
+#: E:\home\ozh\planetozh.com\blog\wp-content\plugins\liz-comment-counter-by-ozh/inc/options.php:99
+msgid "Usage"
+msgstr "Uso"
+
+#: E:\home\ozh\planetozh.com\blog\wp-content\plugins\liz-comment-counter-by-ozh/inc/options.php:100
+msgid "Place the following template tag in your template file, for instance sidebar.php"
+msgstr "Coloque la siguiente etiqueta en su plantilla, por ejemplo, en el fichero sidebar.php"
+
+#: E:\home\ozh\planetozh.com\blog\wp-content\plugins\liz-comment-counter-by-ozh/inc/options.php:116
+msgid "Text Color"
+msgstr "Colo de texto"
+
+#: E:\home\ozh\planetozh.com\blog\wp-content\plugins\liz-comment-counter-by-ozh/inc/options.php:118
+#: E:\home\ozh\planetozh.com\blog\wp-content\plugins\liz-comment-counter-by-ozh/inc/options.php:133
+msgid "Pick a color"
+msgstr "Selecciones un color"
+
+#: E:\home\ozh\planetozh.com\blog\wp-content\plugins\liz-comment-counter-by-ozh/inc/options.php:125
+msgid "Badge Preview"
+msgstr "Vista previa"
+
+#: E:\home\ozh\planetozh.com\blog\wp-content\plugins\liz-comment-counter-by-ozh/inc/options.php:127
+msgid "Update preview"
+msgstr "Actualizar vista previa"
+
+#: E:\home\ozh\planetozh.com\blog\wp-content\plugins\liz-comment-counter-by-ozh/inc/options.php:131
+msgid "Background Color"
+msgstr "Color de fondo"
+
+#: E:\home\ozh\planetozh.com\blog\wp-content\plugins\liz-comment-counter-by-ozh/inc/options.php:139
+msgid "Label"
+msgstr "Etiqueta"
+
+#: E:\home\ozh\planetozh.com\blog\wp-content\plugins\liz-comment-counter-by-ozh/inc/options.php:141
+msgid "Font"
+msgstr "Fuente"
+
+#: E:\home\ozh\planetozh.com\blog\wp-content\plugins\liz-comment-counter-by-ozh/inc/options.php:142
+msgid "Extra&nbsp;spacing"
+msgstr "Espaciado&nbsp;extra"
+
+#: E:\home\ozh\planetozh.com\blog\wp-content\plugins\liz-comment-counter-by-ozh/inc/options.php:145
+msgid "Credit &amp; Love"
+msgstr "Créditos"
+
+#: E:\home\ozh\planetozh.com\blog\wp-content\plugins\liz-comment-counter-by-ozh/inc/options.php:146
+msgid "Add a link back to the plugin page"
+msgstr "Añadir un enlace recíproco al plugin"
+
+#: E:\home\ozh\planetozh.com\blog\wp-content\plugins\liz-comment-counter-by-ozh/inc/options.php:147
+msgid "If you think this is a cool plugin, please leave this option enabled so your loyal readers &amp; commenters can find about this plugin too!"
+msgstr "Si crees que este plugin es útil, por favor, deja esta opción activada para que tus lectores y comentaristas puedan averiguar más sobre el mismo."
+
+#: E:\home\ozh\planetozh.com\blog\wp-content\plugins\liz-comment-counter-by-ozh/inc/options.php:150
+msgid "Reset"
+msgstr "Resetear"
+
+#: E:\home\ozh\planetozh.com\blog\wp-content\plugins\liz-comment-counter-by-ozh/inc/options.php:151
+msgid "Reset to default values"
+msgstr "Resetear a los valores por defecto"
+
+#: E:\home\ozh\planetozh.com\blog\wp-content\plugins\liz-comment-counter-by-ozh/inc/options.php:151
+msgid "do not forget to save"
+msgstr "no olvides guardar"
+
+#: E:\home\ozh\planetozh.com\blog\wp-content\plugins\liz-comment-counter-by-ozh/inc/options.php:154
+msgid "Conversations"
+msgstr "Comentarios"
+
+#: E:\home\ozh\planetozh.com\blog\wp-content\plugins\liz-comment-counter-by-ozh/inc/options.php:155
+#, php-format
+msgid "As of today, there have been here on this blog <b>%s</b>. Given that you currently have <b>%s</b> posts (including pages), this makes a conversation ratio of <b>%s</b> comments per post."
+msgstr "A día de hoy, hay en este blog <b>% s </ b>. Teniendo en cuenta que actualmente tiene <b>% s </ b> entradas (incluyendo páginas), esto hace una relación de conversación de <b>% s </ b> comentarios por entrada."
+
+#: E:\home\ozh\planetozh.com\blog\wp-content\plugins\liz-comment-counter-by-ozh/inc/options.php:158
+msgid "About Liz"
+msgstr "Acerca de Liz"
+
+#: E:\home\ozh\planetozh.com\blog\wp-content\plugins\liz-comment-counter-by-ozh/inc/options.php:159
+msgid "Liz Strauss of <a href=\"http://www.successful-blog.com/\" title=\"Successful-Blog\">Successful-Blog</a> is known as a relationship blogger, with 70,000 and counting comments on her blog. As a professional Social Web Strategist, if you are looking to build connections and conversation or to grow a community of fiercely loyal fans, Liz is the person to see."
+msgstr "Liz Strauss de <a href=\"http://www.successful-blog.com/\" title=\"Successful-Blog\"> Successful-Blog</a> es conocida por ser una blogger de influencia en la red, con más de 70.000 y subiendo de comentarios en su blog. Como profesional de Web Social estratega, si quieres buscar una conexión para conversar y hacer crecer una comunidad de fans leales, Liz es la persona a la que debes unirte.Plugin traducido por: <a href=\"http://www.verasoul.com/\" title=\"Vera's Soul\">Vera</a> "
+
+#: E:\home\ozh\planetozh.com\blog\wp-content\plugins\liz-comment-counter-by-ozh/inc/options.php:160
+msgid "This plugin was made in celebration of her dedication to blog community building so you, too, can show the world how social your blog is by showing off your comment count."
+msgstr "Este plugin ha sido creado en dedicación a su blog y la comunidad, de esta forma puedes mostrar al mundo, lo social que es tu blog, tan solo mostrando el número de comentarios que tienes."
+
+#: E:\home\ozh\planetozh.com\blog\wp-content\plugins\liz-comment-counter-by-ozh/inc/options.php:220
+msgid "Presets"
+msgstr "Memorizaciones"
+
+#: E:\home\ozh\planetozh.com\blog\wp-content\plugins\liz-comment-counter-by-ozh/inc/options.php:221
+msgid "If your theme is widget enabled, simply go the Widgets management page"
+msgstr "Si tu plantilla dispone de widgets activados, simplemente vete a la págian de los Widgets"
+

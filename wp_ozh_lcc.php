@@ -17,6 +17,7 @@ Author URI: http://planetOzh.com
 			 Removed: split logic between widget & option page
              Updated: filters for custom icon & plugin action links
  * 1.1.1     Added: be_BY by ilyuha (http://antsar.info/)
+ * 1.1.2     Added: es_ES by David (Vera)
 */
 
 global $wp_ozh_lcc;
